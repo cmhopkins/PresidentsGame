@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.cdnfonts.com/css/nabla" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/funkie-retro" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inclusive-sans-2" rel="stylesheet">
+</head>
+
+<body id = "back-img">
+  <h1>Name That U.S. President</h1>
+  <div id = "outer-box">
+    <div id = "menu-box">
+      <button onclick = "window.location.reload();">Restart Game</button>
+      <button onclick = "skipQues()">Skip Question</button>
+    </div>
+    <div id = "game-box">
+      <img id = "imageid">
+      <div id = "testing-div"></div>
+      <input type = "text" id = "pres-answer">
+      <button id = "btt" onclick = "submitAns()">Submit</button>
+    </div>
+    <div id = "scoreboard">
+      <h2>Current Score</h2>
+      <div id = "curr-score">0/0</div>
+      <div id = "timer"></div>
+    </div>
+    
+  </div>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+</body>
+
+</html>
