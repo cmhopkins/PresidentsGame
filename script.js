@@ -115,6 +115,7 @@ function loadQuestion() {
   // const test_pic = document.getElementById("testing-div");
   // test_pic.textContent = "Sanity check: " + answers[currItr].name;
   // maybe this should be async or something so that the pic and text load simultaneously
+  console.log(currItr);
   document.getElementById("testing-div").innerHTML = "";
   document.getElementById("imageid").src="presidents/" + answers[currItr].pict;
 }
@@ -147,8 +148,9 @@ function submitAns() {
 }
 
 function displayTotalScore() {
-  const tx = document.getElementById("testing-div");
-  tx.textContent = "Congratulations, you scored " + storeStr + "out of 45";
+  const tx = "Congratulations, you scored " + score + " out of 45";
+  document.getElementById("testing-div").innerHTML = tx;
+  
 }
 
 function displayCurrScore() {
