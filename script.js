@@ -117,7 +117,9 @@ function loadQuestion() {
   // maybe this should be async or something so that the pic and text load simultaneously
   console.log(currItr);
   document.getElementById("testing-div").innerHTML = "";
-  document.getElementById("imageid").src="presidents/" + answers[currItr].pict;
+  document.getElementById("imageid").src="pres_img/" + answers[currItr].pict;
+  const reset = document.getElementById("pres-answer");
+  reset.value = "";
 }
 
 loadQuestion();
@@ -141,8 +143,6 @@ function submitAns() {
   } else {
     document.getElementById("testing-div").innerHTML = "Wrong, it is " + answers[currItr].name[0];
   }
-  const reset = document.getElementById("pres-answer");
-  reset.value = "";
   displayCurrScore();
   nextQuestion();
 }
