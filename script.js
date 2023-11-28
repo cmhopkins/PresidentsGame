@@ -50,7 +50,47 @@ const answers_ordered = [
   {pict: "mckinley.jpeg",
     name: ["William McKinley", "William Mckinley"]},
   {pict: "t_roosevelt.jpeg",
-    name: ["Theodore Roosevelt", "Teddy Roosevelt"]}
+    name: ["Theodore Roosevelt", "Teddy Roosevelt"]},
+  {pict: "taft.jpeg",
+    name: ["William Howard Taft", "William Taft"]},
+  {pict: "wilson.jpeg",
+    name: ["Woodrow Wilson"]},
+  {pict: "harding.jpeg",
+    name: ["Warren G. Harding", "Warren Harding"]},
+  {pict: "coolidge.jpeg",
+    name: ["Calvin Coolidge"]},
+  {pict: "hoover.jpeg",
+    name: ["Herbert Hoover"]},
+  {pict: "f_roosevelt.jpeg",
+    name: ["Franklin D. Roosevelt", "Franklin Roosevelt", "Franklin Delano Roosevelt", "FDR"]},
+  {pict: "truman.jpeg",
+    name: ["Harry S. Truman", "Harry Truman"]},
+  {pict: "eisenhower.jpeg",
+    name: ["Dwight D. Eisenhower", "Dwight Eisenhower"]},
+  {pict: "kennedy.jpeg",
+    name: ["John F. Kennedy", "John Kennedy", "John Fitzgerald Kennedy", "JFK"]},
+  {pict: "l_johnson.jpeg",
+    name: ["Lyndon B. Johnson", "Lyndon Johnson", "Lyndon Baines Johnson", "LBJ"]},
+  {pict: "nixon.jpeg",
+    name: ["Richard Nixon"]},
+  {pict: "ford.jpeg",
+    name: ["Gerald Ford"]},
+  {pict: "carter.jpeg",
+    name: ["Jimmy Carter", "James Carter"]},
+  {pict: "reagan.jpeg",
+    name: ["Ronald Reagan"]},
+  {pict: "hw_bush.jpeg",
+    name: ["George H. W. Bush", "George Bush"]},
+  {pict: "clinton.jpeg",
+    name: ["Bill Clinton", "William Clinton"]},
+  {pict: "bush.jpeg",
+    name: ["George W. Bush", "George Bush"]},
+  {pict: "obama.jpeg",
+    name: ["Barack Obama"]},
+  {pict: "trump.jpeg",
+    name: ["Donald Trump", "Donald J. Trump"]},
+  {pict: "biden.jpeg",
+    name: ["Joe Biden", "Joseph Biden"]}
 ]
 
 let currItr = 0;
@@ -108,7 +148,7 @@ function submitAns() {
 
 function displayTotalScore() {
   const tx = document.getElementById("testing-div");
-  tx.textContent = "Congratulations, you scored " + displayCurrScore();
+  tx.textContent = "Congratulations, you scored " + storeStr + "out of 45";
 }
 
 function displayCurrScore() {
