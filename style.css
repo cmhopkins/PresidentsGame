@@ -68,6 +68,10 @@ button {
   color: white;
 }
 
+#btt-2 {
+  display: none;
+}
+
 h1 {
   font-family: "Inclusive Sans";
   color: green;

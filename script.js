@@ -116,8 +116,13 @@ function loadQuestion() {
   // test_pic.textContent = "Sanity check: " + answers[currItr].name;
   // maybe this should be async or something so that the pic and text load simultaneously
   console.log(currItr);
+  const next = document.getElementById('btt-2');
+  next.style.display = 'none';
+  const submit = document.getElementById('btt-1');
+  submit.style.display = 'block';
   document.getElementById("testing-div").innerHTML = "";
   document.getElementById("imageid").src="pres_img/" + answers[currItr].pict;
+  console.log(answers[currItr].name[0]);
   const reset = document.getElementById("pres-answer");
   reset.value = "";
 }
@@ -138,13 +143,14 @@ function nextQuestion() {
 function submitAns() {
   const ans = document.getElementById("pres-answer").value;
   if (answers[currItr].name.includes(ans)) {
-    document.getElementById("testing-div").innerHTML = "Correct!";
+    // document.getElementById("testing-div").innerHTML = "Correct!";
     score += 1;
+    correctAnswer();
   } else {
-    document.getElementById("testing-div").innerHTML = "Wrong, it is " + answers[currItr].name[0];
+    wrongAnswer();
   }
   displayCurrScore();
-  nextQuestion();
+  // nextQuestion();
 }
 
 function displayTotalScore() {
@@ -161,4 +167,22 @@ function displayCurrScore() {
 function skipQues() {
   displayCurrScore();
   nextQuestion();
+}
+
+
+function correctAnswer() {
+  const submit = document.getElementById('btt-1');
+  const next = document.getElementById('btt-2');
+  submit.style.display = "none";
+  next.style.display = "block";
+  document.getElementById("testing-div").innerHTML = "Correct!";
+}
+
+function wrongAnswer() {
+  const submit = document.getElementById('btt-1');
+  const next = document.getElementById('btt-2');
+  submit.style.display = "none";
+  next.style.display = "block";
+  const ans = answers[currItr].name[0];
+  document.getElementById("testing-div").innerHTML = "The correct answer is " + ans; 
 }
