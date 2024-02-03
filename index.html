@@ -6,24 +6,24 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.cdnfonts.com/css/nabla" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/funkie-retro" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/inclusive-sans-2" rel="stylesheet">
 </head>
 
-<body id = "back-img">
+<body>
   <h1>Name That U.S. President</h1>
   <div id = "outer-box">
     <div id = "menu-box">
+      <button onclick = "window.location.href = 'leader.html'">Leaderboard</button>
       <button onclick = "window.location.reload();">Restart Game</button>
       <button onclick = "skipQues()">Skip Question</button>
     </div>
     <div id = "game-box">
-      <img id = "imageid">
+      <img id = "imageid" width = "300" height = "350">
       <div id = "testing-div"></div>
       <input type = "text" id = "pres-answer">
       <button id = "btt-1" onclick = "submitAns()">Submit</button>
       <button id = "btt-2" onclick = "nextQuestion()">Next</button>
+      <button id = "btt-3" onclick = "submitScore()">Enter your name</button>
     </div>
     <div id = "scoreboard">
       <h2>Current Score</h2>
@@ -32,7 +32,8 @@
     </div>
     
   </div>
-  <script src="script.js"></script>
+  <script src="script.js">
+  </script>
 
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

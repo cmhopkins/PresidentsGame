@@ -95,6 +95,7 @@ const answers_ordered = [
 
 let currItr = 0;
 let score = 0;
+let name = "";
 
 function shuffle(sourceArray) {
     for (let i = 0; i < sourceArray.length - 1; i++) {
@@ -156,6 +157,15 @@ function submitAns() {
 function displayTotalScore() {
   const tx = "Congratulations, you scored " + score + " out of 45";
   document.getElementById("testing-div").innerHTML = tx;
+  const enterName = document.getElementById("btt-3");
+  const next = document.getElementById("btt-2");
+  enterName.style.display = "block";
+  next.style.display = "none";
+}
+
+function submitScore() {
+  name = document.getElementById("pres-answer").value;
+  // now...to pass this into a different javascript file...
   
 }
 
@@ -186,3 +196,5 @@ function wrongAnswer() {
   const ans = answers[currItr].name[0];
   document.getElementById("testing-div").innerHTML = "The correct answer is " + ans; 
 }
+
+// export { name, score };

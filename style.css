@@ -68,7 +68,7 @@ button {
   color: white;
 }
 
-#btt-2 {
+#btt-2, #btt-3 {
   display: none;
 }
 
@@ -98,4 +98,13 @@ h1 {
   padding-bottom: 15px;
 }
 
+table, th, tr, td {
+  border: 1px solid green;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+#leaderboard-table {
+  width: 300px;
+}
 
